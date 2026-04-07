@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Shri Sokka">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+    crossorigin="anonymous"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload = "addYear(); activeNav()">
+<div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        <img src = "../static/museum_img.jpg" alt = "museum image" width = "500" height = "250">
+    </header>
+    <nav class="nav_bar" id="nav_bar">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./explore.html">Explore</a></li>
+        <li><a href="./exhibitions.html">Exhibitions</a></li>
+        <li><a href="./buytickets.html">Buy Tickets</a></li>
+        <li><a href="javascript:void(0);" class="icon" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+        </a></li>
+        </ul>
+    </nav>
+    <main class = "main">
+        <h2>Mission Statement</h2>
+        <p>
+            Since 1993, we have sought to provide the public with access with
+            wide range of contemporary art. We have placed a special emphasis 
+            on the role of technology in the creation, display, and research of
+            art.
+        </p>
+
+        <h2>Milestones</h2>
+        <ul>
+            <li>2025: Established the Center of Interactive Arts for digital installations</li>
+            <li>2020: Hosted the Digital Art Symposium, featuring numerous prolific artists and critics</li>
+            <li>2010: Creation of the Mellon Center for Digital Humanities</li>
+            <li>2002: Aquisition of classic oil painting, "Boy With Apple"</li>
+            <li>1993: MonoMuse opens its doors to the public</li>
+        </ul>
+
+
+    </main>
+    <div id="map"></div>
+    <figure class="main_figure"></figure>
+    <footer class="footer"><p id = "copyYear">© MonoMuse. All rights reserved.</p></footer>
+</div>  
+</body>
+</html>
