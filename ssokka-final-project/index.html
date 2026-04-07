@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Shri Sokka">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="./static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+    crossorigin="anonymous"></script>
+
+</head>
+<body onload = "addYear(); activeNav()">
+<div class="container">
+    <header class="header">
+        <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+    </header>
+    <nav class="nav_bar" id="nav_bar">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="views/explore.html">Explore</a></li>
+        <li><a href="views/exhibitions.html">Exhibitions</a></li>
+        <li><a href="views/buytickets.html">Buy Tickets</a></li>
+        <li><a href="views/membership.html">Become a Member</a></li>
+        <li><a href="javascript:void(0);" class="icon" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+        </a></li>
+        </ul>
+    </nav>
+    <main class = "main">
+        <h2 id = "greeting">Welcome to MonoMuse</h2>
+        <p>
+            MonoMuse is a cultural institution dedicated to exploring the
+            intersection of art and technology, providing interactive
+            installations and experiences for visitors. We hope that our museum
+            will educate the public on how art, technology and culture are 
+            inexorably linked, and inspire creators to experiment with their
+            art in this digital age.
+        </p>
+        <button onclick="ticketsLink()">Buy Tickets</button>
+        <br>
+        <h3 style="text-align:center"><strong>Featured Exhibition: The Trippy Sci-Fi of Moebius</strong></h3> 
+        <div class="slideshow_container" style="text-align:center">
+            <div class="mySlides fade">
+                <img src="./static/Moebius.png" style="width:50%">
+            </div>
+            <div class="mySlides fade">
+                <img src="./static/moebius2.jpg" style="width:50%">
+            </div>
+            <div class="mySlides fade">
+                <img src="./static/moebius3.jpg" style="width:50%">
+            </div>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <p id ="shortIntro">
+            Since 1993, Monomuse has been one of the most versatile 
+            research and cultural institutions. Through our grants, exhibitions, and projects, we
+            have pushed the bounds of contemporary art. We strive to reinvent ourselves
+            year after year, and invite members of the public to give valuable feedback
+            to our museum experience. We appreciate our members and supporters.
+        </p>
+        <button id="readMore">Read More</button>
+        <p id ="longIntro">
+            Some of our projects include public installations in downtown Pittsburgh, funding
+            of teaching artists from Carnegie Mellon University, and our artist-in-residency 
+            program for those interested in merging traditional media with technology. Our exhibitions
+            range from oil paintings to proto-holograms; we welcome an eclectic variety
+            of pieces in our collection, and are constantly striving to add newer
+            and "weirder" pieces. Take a look at our most recent exhibitions for 
+            more info.
+        </p>
+        <button id="readLess">Read Less</button>
+        
+    </main>
+    <figure class ="main_figure"></figure>
+    <footer class="footer"> <p id = "copyYear">© MonoMuse. All rights reserved.</p> </footer>
+</div>
+</body>
+</html>

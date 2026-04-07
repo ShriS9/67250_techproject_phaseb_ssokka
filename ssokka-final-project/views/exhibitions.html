@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Shri Sokka">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+    crossorigin="anonymous"></script>
+</head>
+<body onload = "addYear(); activeNav()">
+<div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+    </header>
+    <nav class="nav_bar" id="nav_bar">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./explore.html">Explore</a></li>
+        <li><a href="./exhibitions.html">Exhibitions</a></li>
+        <li><a href="./buytickets.html">Buy Tickets</a></li>
+        <li><a href="./membership.html">Become a Member</a></li>
+        <li><a href="javascript:void(0);" class="icon" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+        </a></li>
+        </ul>
+    </nav>
+    <main class = "main">
+        <h2>Current Exhibitions</h2>
+        <h3>The Strange Worlds of Moebius</h3>
+        <iframe src="https://www.youtube.com/embed/ARTWDpIlEEY" title="Mœbius |  The Infinite Universe Of A Genius" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>
+            Jean Giraud, better known as "Moebius," was and continues to be 
+            one of the most influential sci-fi artists. His weird and surrealistic 
+            landscapes and cityscapes laid the foundation for cyberpunk and modern-day
+            sci - fi fantasy as a style. His beautiful lineworks brought whole industries
+            alive. MonoMuse is proud to host a special selection of his work, including
+            sketches for an unrealized<i>Dune</i>movie, original comic pages, and
+            some of Moebius's personal experiments with the technology of his time.
+        </p>
+        <h3>Data and Dreams: The beauty of data visualization</h3>
+        <img src="../static/data.webp" style="width:50%" alt="data_image">
+        <p>
+            This exhibition brings the work of globally acclaimed designers together <br>
+            to celebrate interesting and impactful uses of data visualization, an <br>
+            underrated discipline and art form that fuses math, science, data science
+            and art.
+        </p>
+        <h3>Science (Non)fiction: Retrofuturism brought to life</h3>
+        <img src="../static/retro.jpg" alt="retrofuturist_phones" style="width:50%">
+        <p>
+            For this exhibition, we tasked numerous teams comprised of industrial designers, <br>
+            mechanical engineers, science fiction artists, and more, to bring the theoretical inventions<br>
+            of the past to the 21st century. Enjoy a vast array of contraptions from rayguns <br>
+            to "floating" cars in this interdisciplinary show of art and science.
+
+        </p>
+
+    </main>
+    <figure class="main_figure"></figure>
+    <footer class="footer"><p id = "copyYear">© MonoMuse. All rights reserved.</p></footer>
+</div>
+</body>
+</html>

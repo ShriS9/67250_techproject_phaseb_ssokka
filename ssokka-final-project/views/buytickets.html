@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Shri Sokka">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+    crossorigin="anonymous"></script>
+</head>
+<body onload = "addYear(); activeNav()">
+<div class="container">
+   <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+    </header>
+    <nav class="nav_bar" id="nav_bar">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./explore.html">Explore</a></li>
+        <li><a href="./exhibitions.html">Exhibitions</a></li>
+        <li><a href="./buytickets.html">Buy Tickets</a></li>
+        <li><a href="./membership.html">Become a Member</a></li>
+        <li><a href="javascript:void(0);" class="icon" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+        </a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <table>
+            <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Adult</td>
+                <td>Gen. Admission for 18+. Under 18 is free</td>
+                <td>$18</td>
+            </tr>
+            <tr>
+                <td>Student</td>
+                <td>Student ID required</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>Member</td>
+                <td>Member card required</td>
+                <td>$15</td>
+            </tr>
+        </table><br>
+
+    <h3><u>April 2026 Schedule</u></h3>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Hours</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Mon. - Thurs. </td>
+            <td>10 A.M. - 6 P.M.</td>
+        </tr>
+        <tr>
+            <td>Fr. - Sat. </td>
+            <td>9 A.M. - 9 P.M.</td>
+        </tr>
+        <tr>
+            <td>Sun. </td>
+            <td>9 A.M. - 3 P.M.</td>
+        </tr>
+    </table>
+
+    <button id = "buyTickets" onclick="showForm()">Buy Tickets</button>
+        
+    <form id="checkoutForm" action="../views/confirmation.html">
+        <label for ="date">Date: (required)</label><br>
+        <input type="date" id="date" name="date">
+            <br><br>
+        <label for="email">Email: (required)</label><br>
+        <input type="email" id="email" name="email">
+            <br><br>
+        <label for="tickets">Ticket Type: (required)</label> <br>
+        <select name="tickets" id="types">
+            <option value="Adult">Adult</option>
+            <option value="Student">Student</option>
+            <option value="Member">Member</option>
+        </select> 
+        <br><br>
+        <label for="quantity">Ticket Quantity: (required)</label> <br>
+        <input type="number" min="1" max="10" id="quantity" name="quantity">
+            <br><br>
+        <p style="text-align:left">Total: $<span id="price">0</span></p> <br>
+        <button type="submit" value="Submit" onclick="boughtForm()">Submit</button>
+        <label for="mailing">Join our mailing list?</label>
+        <input type="checkbox" id="mailing" name="quantity">
+    </form>
+
+    <button id="cancel" onclick="hideForm()">Cancel</button>
+    <br>
+    </main>
+    <figure class="main_figure"></figure>
+    <footer class="footer"><p id = "copyYear">© MonoMuse. All rights reserved.</p></footer>
+</div>
+</body>
+</html>

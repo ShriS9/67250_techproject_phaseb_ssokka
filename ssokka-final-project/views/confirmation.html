@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Shri Sokka">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+    crossorigin="anonymous"></script>
+</head>
+<body onload = "addYear()">
+
+<div class="container">
+   <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+    </header>
+    <nav class="nav_bar" id="nav_bar">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./explore.html">Explore</a></li>
+        <li><a href="./exhibitions.html">Exhibitions</a></li>
+        <li><a href="./buytickets.html">Buy Tickets</a></li>
+        <li><a href="./membership.html">Become a Member</a></li>
+        <li><a href="javascript:void(0);" class="icon" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+        </a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <h1>You're all set!</h1>
+        <h2>See you soon!</h2>
+        <p>A confirmation email 
+            has been sent to the email address you provided. If you have
+            any questions or need to cancel, please email monomuse@gmail.com or call us at 555-555-5555.
+        </p>
+    </main>
+    <footer class="footer"><p id = "copyYear">© MonoMuse. All rights reserved.</p></footer>
+</body>
+</div>
+</html>
